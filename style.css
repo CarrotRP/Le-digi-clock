@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body{
+    font-family:'Technology';
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: black;
+    grid-template-rows: 90vh 10vh;
+}
+main{
+    border-radius: 10px;
+    border: 20px solid #363636;
+}
+.box{
+    padding: 10px;
+    background-color: #93a67e;
+    border-radius: 2px;
+}
+
+/* top section */
+.top{
+    display: grid;
+    grid-template-columns: 400px 90px;
+    grid-template-rows: repeat(2, 70px);
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+}
+.top p{
+    line-height: 0.69; /*dont ask me why, it works(it align the extra space to the text nicely)*/
+    align-self: end;
+}
+.top p:nth-child(1){
+    font-size: 200px;
+    grid-area: 1 / 1 / 3 / 2;
+}
+.top p:nth-child(1)::before{
+    content: '88:88'; /*font kinda not align properly, probably due to font*/
+    opacity: 0.1;
+    position: absolute;
+}
+.mr{
+    font-size: 40px;
+    justify-self: center;
+    margin-bottom: 10px;
+}
+.second::before{
+    content: '88';
+    position:absolute;
+    opacity: 0.1;
+}
+.second{
+    font-size: 100px;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+/* bot section */
+.bot{
+    font-size: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bot p{
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 0.69; /*nice*/
+}
+.bot p:nth-child(2):hover{
+    background-color: #bed5a4;
+    cursor: pointer;
+}
+
+/* footer */
+footer p{
+    color:#93a67e;
+    font-size: 20px;
+}
