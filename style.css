@@ -19,12 +19,14 @@ body{
 }
 main{
     border-radius: 10px;
-    border: 20px solid #363636;
+    border: 35px solid #363636;
+    box-shadow: -2px 0 black, 0 2px black, 1px 0 white, 0 -1px white;
 }
 .box{
     padding: 10px;
     background-color: #93a67e;
     border-radius: 2px;
+    box-shadow: 2px 0 inset black, 0 -2px inset black, -1px 0 inset white, 0 1px inset white;
 }
 
 /* top section */
@@ -81,9 +83,132 @@ main{
     background-color: #bed5a4;
     cursor: pointer;
 }
-
+.tip{
+    color: yellow; 
+    position: absolute; 
+    bottom: 10vh; 
+    font-weight: 500; 
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.tip-active{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
 /* footer */
+footer{
+    color: yellow;
+}
 footer p{
     color:#93a67e;
     font-size: 20px;
+}
+
+/* popup */
+.popup-bg{
+    z-index: 1;
+    background-color: rgb(128, 128, 128, 0.8);
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    pointer-events: none; /*set an element react to the user pointer or not*/
+    transition: opacity 0.5s;
+}
+.popup-bg-active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s;
+}
+.popup-box{
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+    width: 50vh;
+    height: 90vh;
+    border-radius: 5px;
+    background-color: #363636;
+    display: grid;
+    grid-template-rows: 40px 75vh 10vh;
+    padding: 20px;
+    box-shadow: 2px 0 inset black, 0 -2px inset black, -1px 0 inset white, 0 1px inset white;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+.popup-active{
+    pointer-events: auto;
+    top: 0;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.popup-box h1{
+    justify-self: center;
+    color: white;
+    font-weight: 500;
+}
+.country{
+    overflow-y: auto;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 500;
+    display: grid;
+    grid-template-rows: 50px;
+    gap: 10px;
+    grid-auto-rows: 50px;
+}
+/* custom scrollbar */
+/* scrollable, not visible */
+::-webkit-scrollbar{
+    display: none;
+}
+/* ======== */
+.country p{
+    box-shadow: 2px 0 inset black, 0 -2px inset black, -2px 0 inset white, 0 2px inset white;
+    background-color: #93a67e;
+    display: grid;
+    place-items: center;
+}
+.country p:hover{
+    background-color: #bed5a4;
+}
+.country p:active{
+    font-size: 28px;
+    background-color: #93a67e;
+    box-shadow: none;
+    border: 5px solid #363636;
+    color: #363636;
+}
+p.country-active{
+    color: #363636;
+    pointer-events: none;
+    font-size: 28px;
+    background-color: #93a67e;
+    box-shadow: none;
+    border: 5px solid #363636;
+}
+.popup-box button{
+    background-color: #93a67e;
+    border: none;
+    margin-top: 10px;
+    font-family: inherit;
+    font-size: 24px;
+    box-shadow: 2px 0 inset black, 0 -2px inset black, -2px 0 inset white, 0 2px inset white;
+}
+.popup-box button:hover{
+    background-color: #bed5a4;
+}
+.popup-box button:active{
+    font-size: 23px;
+    background-color: #93a67e;
+    box-shadow: none;
+    border: 4px solid #363636;
 }
