@@ -99,7 +99,7 @@ function setFooter() {
     const footer = document.querySelector('.footer p')
     const date = new Date();
 
-    footer.innerHTML = `&copy; CarrotRP ${date.getFullYear()}`
+    footer.innerHTML = `CarrotRP. ${date.getFullYear()}`
 }
 
 //pop up functions

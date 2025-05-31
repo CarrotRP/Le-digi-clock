@@ -1,6 +1,6 @@
 @font-face{
-    font-family: Technology;
-    src: url(./fonts/Technology.ttf);
+    font-family: Digitalized;
+    src: url(./fonts/Digitalized-Regular.ttf);
 }
 
 *{
@@ -9,7 +9,7 @@
     user-select: none;
 }
 body{
-    font-family: Technology;
+    font-family: Digitalized;
     font-weight: bold;
     display: grid;
     place-items: center;
