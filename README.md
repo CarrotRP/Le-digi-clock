@@ -1,8 +1,15 @@
 # Le-Digi-clock
 
-a digital clock with vanilla js
+a digital clock with vanilla js base on location, user can change the timezone
 
 **font might look weird, i know**
+
+## Screenshots
+
+### main screen
+![main screen](/assets/main.png)
+### popup
+![popup](/assets/popup.png)
 
 ### TODO
 
